@@ -1,6 +1,7 @@
 # Retro Snake
 
 A classic snake game built with C++ and the raylib library. This project features a retro aesthetic with a simple and intuitive menu, sound effects, and classic gameplay mechanics.
+![Snake Video GIF](./public/snake.gif)
 
 ## About The Project
 
