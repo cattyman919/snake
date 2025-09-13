@@ -5,7 +5,7 @@ A classic snake game built with C++ and the raylib library. This project feature
 
 ## About The Project
 
-This project is a modern implementation of the classic Snake game, inspired by the tutorial from **Learn with Gergely**. The player controls a snake that grows in length by eating food. The game ends if the snake collides with the edges of the screen or its own body. It's built with a clean and modular C++ structure and uses CMake for easy building across multiple platforms.
+This project is a modern implementation of the classic Snake game, inspired by the tutorial from **Programming With Nick**. The player controls a snake that grows in length by eating food. The game ends if the snake collides with the edges of the screen or its own body. It's built with a clean and modular C++ structure and uses CMake for easy building across multiple platforms.
 
 ### Key Features
 
