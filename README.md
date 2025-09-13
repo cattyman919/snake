@@ -84,4 +84,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Acknowledgments
 
 - Thanks to [raysan5](https://github.com/raysan5) for creating the amazing [raylib](https://github.com/raysan5/raylib) library.
-- This project was based on the C++ Snake Game Tutorial by [Learn with Gergely on YouTube](https://www.youtube.com/watch?v=LGqsnM_WEK4).
+- This project was based on the C++ Snake Game Tutorial by [Programming With Nick](https://www.youtube.com/watch?v=LGqsnM_WEK4).
