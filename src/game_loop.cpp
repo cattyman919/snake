@@ -32,13 +32,13 @@ GameLoop::GameLoop() {
 
   // Load Keyboard UI Images
   Image image_up =
-      LoadImage(ASSETS_PATH "images/keyboard_arrow_up_outline.png");
+      LoadImage(ASSETS_PATH "images/ui/keyboard_arrow_up_outline.png");
   Image image_down =
-      LoadImage(ASSETS_PATH "images/keyboard_arrow_down_outline.png");
+      LoadImage(ASSETS_PATH "images/ui/keyboard_arrow_down_outline.png");
   Image image_right =
-      LoadImage(ASSETS_PATH "images/keyboard_arrow_right_outline.png");
+      LoadImage(ASSETS_PATH "images/ui/keyboard_arrow_right_outline.png");
   Image image_left =
-      LoadImage(ASSETS_PATH "images/keyboard_arrow_left_outline.png");
+      LoadImage(ASSETS_PATH "images/ui/keyboard_arrow_left_outline.png");
 
   m_tex_keyboard_arrow_up = LoadTextureFromImage(image_up);
   m_tex_keyboard_arrow_down = LoadTextureFromImage(image_down);

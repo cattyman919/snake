@@ -9,7 +9,7 @@
 // #define DEBUG
 
 Food::Food() {
-  Image image = LoadImage(ASSETS_PATH "images/food.png");
+  Image image = LoadImage(ASSETS_PATH "images/apple.png");
   m_texture = LoadTextureFromImage(image);
   UnloadImage(image);
 #ifdef DEBUG

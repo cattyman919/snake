@@ -86,3 +86,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Thanks to [raysan5](https://github.com/raysan5) for creating the amazing [raylib](https://github.com/raysan5/raylib) library.
 - This project was based on the C++ Snake Game Tutorial by [Programming With Nick](https://www.youtube.com/watch?v=LGqsnM_WEK4).
 - Thanks to Kenney for the free [input assets](https://kenney.nl/assets/input-prompts).
+- Tanks to Clear_code for the free [Snake Game Assets](https://opengameart.org/content/snake-game-assets).
