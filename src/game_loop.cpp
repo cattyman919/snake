@@ -132,6 +132,10 @@ void GameLoop::DrawPlaying() const {
                        5, color::darkGreen);
 
   DrawText("Retro Snake", constants::offset - 5, 20, 40, color::darkGreen);
+  DrawText(TextFormat("FPS: %d", GetFPS()),
+           constants::cellSize * constants::cellCount - constants::offset, 30,
+           30, color::darkGreen);
+
   DrawText(TextFormat("Score: %d", m_score), constants::offset - 5,
            constants::offset + 8 + constants::cellSize * constants::cellCount,
            40, color::darkGreen);
