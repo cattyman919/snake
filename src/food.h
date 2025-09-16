@@ -2,6 +2,7 @@
 #define FOOD_H
 
 #include <deque>
+#include <vector>
 
 #include "constants.h"
 #include "raylib.h"
@@ -15,7 +16,9 @@ class Food {
 
   void Draw();
 
-  const Vector2 GenerateRandomPos(const std::deque<Vector2>& snakeBody) const;
+  const Vector2 GenerateRandomPos(
+      const std::deque<Vector2>& snakeBody_pos) const;
+
   const Vector2 getPosition() const;
   void setPosition(const Vector2& position);
 

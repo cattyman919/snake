@@ -66,7 +66,7 @@ GameLoop::GameLoop() {
   m_snake = std::make_unique<Snake>();
 
   m_food = std::make_unique<Food>();
-  m_food->setPosition(m_food->GenerateRandomPos(m_snake->GetBody()));
+  m_food->setPosition(m_food->GenerateRandomPos(m_snake->GetBodyPos()));
 
   InitAudioDevice();
   eatSound = LoadSound(ASSETS_PATH "sounds/eat.mp3");
@@ -313,7 +313,7 @@ void GameLoop::Update() {
 
 void GameLoop::CheckCollisionFood() {
   if (m_snake->GetHead() == m_food->getPosition()) {
-    m_food->setPosition(m_food->GenerateRandomPos(m_snake->GetBody()));
+    m_food->setPosition(m_food->GenerateRandomPos(m_snake->GetBodyPos()));
     m_snake->setAddSegment(true);
     m_score++;
     PlaySound(eatSound);
@@ -321,7 +321,7 @@ void GameLoop::CheckCollisionFood() {
 }
 
 void GameLoop::CheckCollisionTail() {
-  std::deque<Vector2> headlessBody{m_snake->GetBody()};
+  std::deque<Vector2> headlessBody{m_snake->GetBodyPos()};
   headlessBody.pop_front();
 
   if (ElementInDeque(m_snake->GetHead(), headlessBody)) {
@@ -351,7 +351,7 @@ void GameLoop::GameOver() {
 #endif
 
   m_snake->Reset();
-  m_food->setPosition(m_food->GenerateRandomPos(m_snake->GetBody()));
+  m_food->setPosition(m_food->GenerateRandomPos(m_snake->GetBodyPos()));
   m_score = 0;
   PlaySound(wallSound);
 

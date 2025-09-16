@@ -1,6 +1,6 @@
 #include "food.h"
 
-#include <deque>
+#include <vector>
 
 #include "constants.h"
 #include "raylib.h"
@@ -31,10 +31,10 @@ inline const Vector2 generateRandomCell() {
 }
 
 const Vector2 Food::GenerateRandomPos(
-    const std::deque<Vector2>& snakeBody) const {
+    const std::deque<Vector2>& snakeBody_pos) const {
   Vector2 position{generateRandomCell()};
 
-  while (ElementInDeque(position, snakeBody)) {
+  while (ElementInDeque(position, snakeBody_pos)) {
     position = generateRandomCell();
   }
   return position;
