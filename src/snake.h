@@ -17,9 +17,10 @@ inline constexpr std::array<Vector2, 4> DIRECTION_VECTORS{{
 
 class Snake {
  public:
-  Snake() = default;
+  Snake();
   Snake(const Snake& other) = delete;
   Snake& operator=(const Snake& other) = delete;
+  ~Snake();
 
   void DrawSnake() const;
   void Update();
@@ -36,6 +37,9 @@ class Snake {
   bool m_addSegment{false};
   std::deque<Vector2> body{{6, 9}, {5, 9}, {4, 9}};
   SNAKE_DIRECTION m_direction{SNAKE_DIRECTION::DOWN};
+
+  Texture2D m_texture_head;
+  Texture2D m_texture_body;
 };
 
 #endif

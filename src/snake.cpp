@@ -9,6 +9,22 @@
 
 using constants::cellSize;
 
+Snake::Snake() {
+  Image snake_head_img = LoadImage(ASSETS_PATH "images/snake_head.png");
+  Image snake_body_img = LoadImage(ASSETS_PATH "images/snake_body.png");
+
+  m_texture_head = LoadTextureFromImage(snake_head_img);
+  m_texture_body = LoadTextureFromImage(snake_body_img);
+
+  UnloadImage(snake_head_img);
+  UnloadImage(snake_body_img);
+}
+
+Snake::~Snake() {
+  UnloadTexture(m_texture_head);
+  UnloadTexture(m_texture_body);
+}
+
 void Snake::DrawSnake() const {
   for (const auto& [x, y] : body) {
     Rectangle segment{Rectangle{constants::offset + x * cellSize,

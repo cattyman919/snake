@@ -5,6 +5,7 @@
 
 #include "constants.h"
 #include "food.h"
+#include "raylib.h"
 #include "snake.h"
 enum class GAME_STATE { MENU, PLAYING, PAUSED, GAMEOVER };
 
@@ -12,7 +13,6 @@ class GameLoop {
  public:
   GameLoop();
   GameLoop(const GameLoop& other) = delete;
-
   GameLoop& operator=(const GameLoop& other) = delete;
   ~GameLoop();
 
@@ -27,7 +27,8 @@ class GameLoop {
   GAME_STATE gameState{GAME_STATE::MENU};
 
   // Objects
-  Snake m_snake{};
+  // Snake m_snake{};
+  std::unique_ptr<Snake> m_snake;
   std::unique_ptr<Food> m_food;
   int m_score{0};
   Sound eatSound;
@@ -41,6 +42,12 @@ class GameLoop {
   const int m_gridWidth{m_screenWidth / constants::cellSize};
   const int m_gridHeight{m_screenHeight / constants::cellSize};
 
+  // Keyboard Texture UI
+  Texture2D m_tex_keyboard_arrow_up;
+  Texture2D m_tex_keyboard_arrow_right;
+  Texture2D m_tex_keyboard_arrow_down;
+  Texture2D m_tex_keyboard_arrow_left;
+
   // Main Draw Method
   void Draw();
 
@@ -49,6 +56,7 @@ class GameLoop {
   void DrawMenu() const;
   void DrawGameOver() const;
   void DrawGrid() const;
+  void DrawKeyboardUI() const;
 
   // Update Method
   void Update();
